@@ -77,14 +77,14 @@
     </footer>
 
     <script type="text/javascript">
-        const videos = ["https://www.youtube.com/embed/z8WpMJjVx8M", "https://www.youtube.com/embed/9ZIo4Fss8Qc", "https://www.youtube.com/embed/R6tFC0ooaWg", "https://www.youtube.com/embed/rzTBJk4GC4U", "https://www.youtube.com/embed/1r7de4KvEH0", "https://www.youtube.com/embed/avF75OaFtzs", "https://www.youtube.com/embed/x-3XxK6N0kM", "https://www.youtube.com/embed/SOywivVsBUM"]
+        const videos = ["z8WpMJjVx8M", "9ZIo4Fss8Qc", "R6tFC0ooaWg", "rzTBJk4GC4U", "1r7de4KvEH0", "avF75OaFtzs", "x-3XxK6N0kM", "SOywivVsBUM", "9Dp9cX4PG2I", "RPjL909DiVI", "dQw4w9WgXcQ", "xt5zND_wSG0"]
         
         let query = new URLSearchParams(window.location.search);
         document.getElementById('query-header').innerHTML = document.getElementById('query-header').innerHTML + ((query.get('query') != null) ? query.get('query') : '');
         
         let videoIndex = Math.floor(Math.random() * videos.length)
         // src="https://www.youtube.com/embed/9ZIo4Fss8Qc?autoplay=1&controls=0&modestbranding=1"
-        document.getElementById('video').src = videos[videoIndex] + '?autoplay=1&controls=0&modestbranding=1'
+        document.getElementById('video').src = 'https://www.youtube.com/embed/' + videos[videoIndex] + '?autoplay=1&controls=0&modestbranding=1'
     </script>
 
 </body>
