@@ -60,7 +60,7 @@
     <main class="flex-shrink-0">
         <div class="container">
             <h1 id="query-header">Query results for </h1>
-            <iframe width="1280" height="721" src="https://www.youtube.com/embed/9ZIo4Fss8Qc?autoplay=1&controls=0&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="video" width="1280" height="721" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </main>
 
@@ -77,8 +77,14 @@
     </footer>
 
     <script type="text/javascript">
+        const videos = ["https://www.youtube.com/embed/z8WpMJjVx8M", "https://www.youtube.com/embed/9ZIo4Fss8Qc", "https://www.youtube.com/embed/R6tFC0ooaWg", "https://www.youtube.com/embed/rzTBJk4GC4U", "https://www.youtube.com/embed/1r7de4KvEH0", "https://www.youtube.com/embed/avF75OaFtzs", "https://www.youtube.com/embed/x-3XxK6N0kM", "https://www.youtube.com/embed/SOywivVsBUM"]
+        
         let query = new URLSearchParams(window.location.search);
         document.getElementById('query-header').innerHTML = document.getElementById('query-header').innerHTML + ((query.get('query') != null) ? query.get('query') : '');
+        
+        let videoIndex = Math.floor(Math.random() * videos.length)
+        // src="https://www.youtube.com/embed/9ZIo4Fss8Qc?autoplay=1&controls=0&modestbranding=1"
+        document.getElementById('video').src = videos[videoIndex] + '?autoplay=1&controls=0&modestbranding=1'
     </script>
 
 </body>
